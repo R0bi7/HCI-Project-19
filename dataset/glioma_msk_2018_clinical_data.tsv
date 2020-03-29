@@ -1,0 +1,92 @@
+Study ID	Patient ID	Sample ID	Cancer Type	Cancer Type Detailed	Fraction Genome Altered	Gene Panel	Matched Normal	Mutation Count	Oncotree Code	Sample Class	Number of Samples Per Patient	Sample Type	Sex	Specimen Preservation Type	Tissue Site
+glioma_msk_2018	IM-GBM-1	Patient-01-CSF	Glioma	Oligodendroglioma	0.0967	IMPACT410	Yes	13	ODG	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-1	Patient-01-T	Glioma	Anaplastic Oligodendroglioma	0.0806	IMPACT410	Yes	5	AODG	Resection	2	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-2	Patient-02-CSF	Glioma	Anaplastic Oligodendroglioma	0.1101	IMPACT410	Yes	6	AODG	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-2	Patient-02-T	Glioma	Anaplastic Oligodendroglioma	0.1157	IMPACT410	Yes	6	AODG	Resection	2	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-3	Patient-03-CSF	Glioma	Anaplastic Oligodendroglioma	0.1981	IMPACT410	Yes	5	AODG	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-3	Patient-03-T	Glioma	Anaplastic Oligodendroglioma	0.1713	IMPACT410	Yes	6	AODG	Resection	2	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-4	Patient-04-CSF	Glioma	Anaplastic Astrocytoma	0.0022	IMPACT410	Yes	1	AASTR	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-4	Patient-04-T	Glioma	Anaplastic Astrocytoma	0.1457	IMPACT410	Yes	4	AASTR	Resection	2	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-5	Patient-05-CSF	Glioma	Anaplastic Astrocytoma	0.2109	IMPACT410	Yes	17	AASTR	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-5	Patient-05-T	Glioma	Anaplastic Astrocytoma	0.1033	IMPACT410	Yes	7	AASTR	Resection	2	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-6	Patient-06-CSF	Glioma	Anaplastic Astrocytoma	0.0000	IMPACT410	Yes	1	AASTR	cfDNA	2	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-6	Patient-06-T	Glioma	Anaplastic Astrocytoma	0.0717	IMPACT410	Yes	8	AASTR	Resection	2	Recurrence	Female	FFPE	NA
+glioma_msk_2018	IM-GBM-7	Patient-07-CSF1	Glioma	Glioblastoma Multiforme	0.0022	IMPACT410	Yes	6	GBM	cfDNA	6	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-7	Patient-07-CSF2	Glioma	Glioblastoma Multiforme	0.3302	IMPACT410	Yes	7	GBM	cfDNA	6	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-7	Patient-07-T1	Glioma	Glioblastoma Multiforme	0.5742	IMPACT410	Yes	5	GBM	Resection	6	Primary	Female	FFPE	NA
+glioma_msk_2018	IM-GBM-7	Patient-07-T2	Glioma	Glioblastoma Multiforme	0.0002	IMPACT410	Yes	5	GBM	Resection	6	Recurrence	Female	FFPE	NA
+glioma_msk_2018	IM-GBM-7	Patient-07-T3	Glioma	Glioblastoma Multiforme	0.3940	IMPACT410	Yes	9	GBM	Biopsy	6	Recurrence	Female	FFPE	NA
+glioma_msk_2018	IM-GBM-7	Patient-07-T4	Glioma	Glioblastoma Multiforme	0.2277	IMPACT410	Yes	8	GBM	Resection	6	Recurrence	Female	FFPE	NA
+glioma_msk_2018	IM-GBM-8	Patient-08-CSF	Glioma	Anaplastic Astrocytoma	0.4649	IMPACT410	Yes	3	AASTR	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-8	Patient-08-T	Glioma	Anaplastic Astrocytoma	0.3408	IMPACT410	Yes	5	AASTR	Resection	2	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-9	Patient-09-CSF	Glioma	Anaplastic Astrocytoma	0.1845	IMPACT410	Yes	1	AASTR	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-9	Patient-09-T	Glioma	Anaplastic Astrocytoma	0.1631	IMPACT410	Yes	3	AASTR	Resection	2	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-10	Patient-10-CSF-LP	Glioma	Anaplastic Astrocytoma	0.2910	IMPACT410	Yes	7	AASTR	cfDNA	3	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-10	Patient-10-CSF-VP	Glioma	Anaplastic Astrocytoma	0.0250	IMPACT410	Yes	7	AASTR	cfDNA	3	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-10	Patient-10-T	Glioma	Anaplastic Astrocytoma	0.3044	IMPACT410	Yes	6	AASTR	Resection	3	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-11	Patient-11-CSF	Glioma	Glioblastoma Multiforme	0.4186	IMPACT410	Yes	6	GBM	cfDNA	2	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-11	Patient-11-T	Glioma	Glioblastoma Multiforme	0.3920	IMPACT410	Yes	7	GBM	Resection	2	Recurrence	Female	FFPE	NA
+glioma_msk_2018	IM-GBM-12	Patient-12-CSF	Glioma	Glioblastoma Multiforme	0.1221	IMPACT410	Yes	1	GBM	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-12	Patient-12-T	Glioma	Glioblastoma Multiforme	0.5528	IMPACT410	Yes	2	GBM	Resection	2	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-13	Patient-13-CSF	Glioma	High-Grade Glioma, NOS	0.8698	IMPACT410	Yes	1	HGGNOS	cfDNA	2	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-13	Patient-13-T	Glioma	High-Grade Glioma, NOS	1.0000	IMPACT410	Yes	1	HGGNOS	Resection	2	Primary	Female	FFPE	NA
+glioma_msk_2018	IM-GBM-14	Patient-14-CSF	Glioma	Glioblastoma Multiforme	0.0009	IMPACT410	Yes	NA	GBM	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-14	Patient-14-T	Glioma	Glioblastoma Multiforme	0.1580	IMPACT410	Yes	5	GBM	Resection	2	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-15	Patient-15-CSF-LP	Glioma	Glioblastoma Multiforme	0.0000	IMPACT410	Yes	6	GBM	cfDNA	3	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-15	Patient-15-CSF-VP	Glioma	Glioblastoma Multiforme	0.0000	IMPACT410	Yes	6	GBM	cfDNA	3	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-15	Patient-15-T	Glioma	Glioblastoma Multiforme	0.1251	IMPACT410	Yes	6	GBM	Resection	3	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-16	Patient-16-CSF	Glioma	Glioblastoma Multiforme	0.0613	IMPACT410	Yes	1	GBM	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-16	Patient-16-T	Glioma	Glioblastoma Multiforme	0.1018	IMPACT410	Yes	3	GBM	Resection	2	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-17	Patient-17-CSF-LP	Glioma	Glioblastoma Multiforme	0.0654	IMPACT410	Yes	5	GBM	cfDNA	3	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-17	Patient-17-CSF-VP	Glioma	Glioblastoma Multiforme	0.0655	IMPACT410	Yes	5	GBM	cfDNA	3	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-17	Patient-17-T	Glioma	Glioblastoma Multiforme	0.1432	IMPACT410	Yes	6	GBM	Resection	3	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-18	Patient-18-CSF	Glioma	Glioblastoma Multiforme	0.0000	IMPACT410	Yes	1	GBM	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-18	Patient-18-T	Glioma	Glioblastoma Multiforme	0.1898	IMPACT410	Yes	4	GBM	Resection	2	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-19	Patient-19-CSF	Glioma	Glioblastoma Multiforme	0.0011	IMPACT410	Yes	5	GBM	cfDNA	2	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-19	Patient-19-T	Glioma	Glioblastoma Multiforme	0.0474	IMPACT410	Yes	5	GBM	Resection	2	Primary	Female	FFPE	NA
+glioma_msk_2018	IM-GBM-20	Patient-20-CSF	Glioma	Glioblastoma Multiforme	0.0000	IMPACT410	Yes	5	GBM	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-20	Patient-20-T	Glioma	Glioblastoma Multiforme	0.0023	IMPACT410	Yes	7	GBM	Resection	2	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-21	Patient-21-CSF-LP	Glioma	Glioblastoma Multiforme	0.3257	IMPACT410	Yes	6	GBM	cfDNA	3	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-21	Patient-21-CSF-VP	Glioma	Glioblastoma Multiforme	0.2072	IMPACT410	Yes	6	GBM	cfDNA	3	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-21	Patient-21-T	Glioma	Glioblastoma Multiforme	0.1602	IMPACT410	Yes	6	GBM	Resection	3	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-22	Patient-22-CSF	Glioma	Glioblastoma Multiforme	0.1224	IMPACT410	Yes	6	GBM	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-22	Patient-22-T	Glioma	Glioblastoma Multiforme	0.1888	IMPACT410	Yes	9	GBM	Resection	2	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-23	Patient-23-CSF	Glioma	Glioblastoma Multiforme	0.2099	IMPACT410	Yes	6	GBM	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-23	Patient-23-T	Glioma	High-Grade Glioma, NOS	0.1842	IMPACT410	Yes	6	HGGNOS	Biopsy	2	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-24	Patient-24-CSF	Glioma	Glioblastoma Multiforme	0.0390	IMPACT410	Yes	3	GBM	cfDNA	2	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-24	Patient-24-T	Glioma	Glioblastoma Multiforme	0.3212	IMPACT410	Yes	3	GBM	Resection	2	Recurrence	Female	FFPE	NA
+glioma_msk_2018	IM-GBM-25	Patient-25-CSF	Glioma	Glioblastoma Multiforme	0.1157	IMPACT410	Yes	5	GBM	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-25	Patient-25-T	Glioma	Glioblastoma Multiforme	0.1715	IMPACT410	Yes	5	GBM	Resection	2	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-26	Patient-26-CSF	Glioma	Glioblastoma Multiforme	0.1532	IMPACT410	Yes	1	GBM	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-26	Patient-26-T	Glioma	Glioblastoma Multiforme	0.3960	IMPACT410	Yes	4	GBM	Resection	2	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-27	Patient-27-CSF	Glioma	Glioblastoma Multiforme	0.1601	IMPACT410	Yes	3	GBM	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-27	Patient-27-T	Glioma	Glioblastoma Multiforme	0.1592	IMPACT410	Yes	1	GBM	Resection	2	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-28	Patient-28-CSF	Glioma	Glioblastoma Multiforme	0.0015	IMPACT410	Yes	4	GBM	cfDNA	4	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-28	Patient-28-T1	Glioma	Glioblastoma Multiforme	0.6457	IMPACT410	Yes	4	GBM	Resection	4	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-28	Patient-28-T2	Glioma	Glioblastoma	0.0738	IMPACT410	Yes	4	GB	Resection	4	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-28	Patient-28-T3	Glioma	Glioblastoma Multiforme	0.2596	IMPACT410	Yes	5	GBM	Resection	4	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-29	Patient-29-CSF	Glioma	Glioblastoma Multiforme	0.1361	IMPACT410	Yes	3	GBM	cfDNA	2	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-29	Patient-29-T	Glioma	Glioblastoma Multiforme	0.1968	IMPACT410	Yes	4	GBM	Resection	2	Primary	Female	FFPE	NA
+glioma_msk_2018	IM-GBM-30	Patient-30-CSF-LP	Glioma	Gliosarcoma	0.2712	IMPACT410	Yes	5	GSARC	cfDNA	3	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-30	Patient-30-CSF-VP	Glioma	Gliosarcoma	0.2785	IMPACT410	Yes	5	GSARC	cfDNA	3	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-30	Patient-30-T	Glioma	Gliosarcoma	0.5465	IMPACT410	Yes	4	GSARC	Resection	3	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-31	Patient-31-CSF	Glioma	Anaplastic Oligodendroglioma	0.0625	IMPACT410	Yes	25	AODG	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-31	Patient-31-T	Glioma	Anaplastic Oligodendroglioma	0.2420	IMPACT410	Yes	14	AODG	Resection	2	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-32	Patient-32-CSF	Glioma	Anaplastic Oligodendroglioma	0.1678	IMPACT410	Yes	56	AODG	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-32	Patient-32-T	Glioma	Anaplastic Oligodendroglioma	0.1246	IMPACT410	Yes	4	AODG	Resection	2	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-33	Patient-33-CSF	Glioma	Glioblastoma Multiforme	0.3795	IMPACT410	Yes	94	GBM	cfDNA	2	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-33	Patient-33-T	Glioma	Glioblastoma Multiforme	0.2608	IMPACT410	Yes	55	GBM	Resection	2	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-34	Patient-34-CSF-LP	Glioma	Glioblastoma Multiforme	0.3093	IMPACT410	Yes	199	GBM	cfDNA	3	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-34	Patient-34-CSF-VP	Glioma	Glioblastoma Multiforme	0.3342	IMPACT410	Yes	227	GBM	cfDNA	3	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-34	Patient-34-T	Glioma	Glioblastoma Multiforme	0.2116	IMPACT410	Yes	33	GBM	Resection	3	Recurrence	Female	FFPE	NA
+glioma_msk_2018	IM-GBM-35	Patient-35-CSF	Glioma	Glioblastoma Multiforme	0.0670	IMPACT410	NA	31	GBM	cfDNA	2	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-35	Patient-35-T	Glioma	Glioblastoma	0.1420	IMPACT410	NA	71	GB	Resection	2	Recurrence	Female	FFPE	NA
+glioma_msk_2018	IM-GBM-36	Patient-36-CSF	Glioma	Glioblastoma Multiforme	0.1367	IMPACT410	Yes	120	GBM	cfDNA	3	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-36	Patient-36-T1	Glioma	Glioblastoma Multiforme	0.2797	IMPACT410	Yes	5	GBM	Resection	3	Primary	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-36	Patient-36-T2	Glioma	Glioblastoma Multiforme	0.1276	IMPACT410	Yes	112	GBM	Resection	3	Recurrence	Male	FFPE	NA
+glioma_msk_2018	IM-GBM-37	Patient-37-CSF	Glioma	Glioblastoma Multiforme	0.4675	IMPACT410	Yes	5	GBM	cfDNA	1	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-38	Patient-38-CSF	Glioma	Glioblastoma Multiforme	0.1517	IMPACT410	Yes	4	GBM	cfDNA	1	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-39	Patient-39-CSF	Glioma	Glioblastoma Multiforme	0.1802	IMPACT410	NA	6	GBM	cfDNA	1	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-40	Patient-40-CSF	Glioma	High-Grade Glioma, NOS	0.1566	IMPACT410	NA	9	HGGNOS	cfDNA	1	Unknown_Tumor	Female	CFDNA	NA
+glioma_msk_2018	IM-GBM-41	Patient-41-CSF	Glioma	Glioblastoma Multiforme	0.0011	IMPACT410	Yes	NA	GBM	cfDNA	1	Unknown_Tumor	Male	CFDNA	NA
+glioma_msk_2018	IM-GBM-42	Patient-42-CSF	Glioma	Glioblastoma Multiforme	0.0012	IMPACT410	NA	5	GBM	cfDNA	1	Unknown_Tumor	Male	CFDNA	NA

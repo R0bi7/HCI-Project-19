@@ -1,0 +1,62 @@
+Study ID	Patient ID	Sample ID	Diagnosis Age	Cancer Type	Cancer Type Detailed	Neoplasm Histologic Grade	IDH1 Mutation	MGMT Status	Mutation Count	Non-silent mutations in TP53, ATRX, CIC, FUBP1	Note	Oncotree Code	Overall Survival (Months)	Overall Survival Status	Number of Samples Per Patient	Sample Type	Sex	Somatic Status	1p/19q Status
+lgg_ucsf_2014	P01	P01_Pri	28	Glioma	Astrocytoma	II	R132H	Unmethylated	39	TP53, ATRX	NA	ASTR	58	DECEASED	2	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P01	P01_Rec	28	Glioma	Glioblastoma	IV	R132H	Methylated	1226	TP53, ATRX	NA	GB	58	DECEASED	2	Recurrent	Male	Matched	19q deletion
+lgg_ucsf_2014	P02	P02_Pri	26	Glioma	Oligoastrocytoma	II	R132H	Methylated	24	TP53	Patient lost follow up	OAST	5	NA	2	Primary	Female	Matched	19q deletion
+lgg_ucsf_2014	P02	P02_Rec	26	Glioma	Anaplastic Astrocytoma	III	R132H	Unmethylated	21	TP53	Patient lost follow up	AASTR	5	NA	2	Recurrent	Female	Matched	19q deletion
+lgg_ucsf_2014	P04	P04_Pri	22	Glioma	Astrocytoma	II	R132C	Unknown	12	TP53	NA	ASTR	61	DECEASED	4	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P04	P04_Rec1	22	Glioma	Anaplastic Astrocytoma	III	R132C	Unknown	28	TP53	NA	AASTR	61	DECEASED	4	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P04	P04_Rec2	22	Glioma	Anaplastic Astrocytoma	III	R132C	Unknown	18	TP53	NA	AASTR	61	DECEASED	4	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P04	P04_Rec3	22	Glioma	Anaplastic Astrocytoma	III	R132C	Unknown	55	TP53	NA	AASTR	61	DECEASED	4	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P05	P05_Pri	39	Glioma	Astrocytoma	II	R132H	Methylated	29	TP53, ATRX	NA	ASTR	74	DECEASED	2	Primary	Female	Matched	Intact
+lgg_ucsf_2014	P05	P05_Rec	39	Glioma	Glioblastoma	IV	R132H	Methylated	1382	TP53, ATRX	NA	GB	74	DECEASED	2	Recurrent	Female	Matched	Intact
+lgg_ucsf_2014	P06	P06_Pri	22	Glioma	Astrocytoma	II	R132H	Unmethylated	1	NA	NA	ASTR	87	DECEASED	2	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P06	P06_Rec	22	Glioma	Astrocytoma	II	R132H	Methylated	20	TP53, ATRX	NA	ASTR	87	DECEASED	2	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P07	P07_Pri	30	Glioma	Astrocytoma	II	R132H	Unknown	101	TP53, ATRX	NA	ASTR	148	DECEASED	2	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P07	P07_Rec	30	Glioma	Astrocytoma	II	R132H	Unknown	124	TP53, ATRX	NA	ASTR	148	DECEASED	2	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P08	P08_Pri	44	Glioma	Oligoastrocytoma	II	R132H	Unknown	20	TP53, ATRX	NA	OAST	103	DECEASED	2	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P08	P08_Rec	44	Glioma	Glioblastoma	IV	R132H	Unknown	50	TP53, ATRX	NA	GB	103	DECEASED	2	Recurrent	Male	Matched	19q deletion
+lgg_ucsf_2014	P09	P09_Pri	28	Glioma	Astrocytoma	II	R132H	Methylated	5	TP53	NA	ASTR	45	DECEASED	2	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P09	P09_Rec	28	Glioma	Glioblastoma	IV	R132H	Methylated	33	TP53	NA	GB	45	DECEASED	2	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P10	P10_Pri	41	Glioma	Astrocytoma	II	R132H	Methylated	27	TP53, ATRX	NA	ASTR	44	DECEASED	2	Primary	Female	Matched	Intact
+lgg_ucsf_2014	P10	P10_Rec	41	Glioma	Glioblastoma	IV	R132H	Methylated	1885	TP53, ATRX	NA	GB	44	DECEASED	2	Recurrent	Female	Matched	Intact
+lgg_ucsf_2014	P11	P11_Pri	30	Glioma	Oligoastrocytoma	II	R132H	Methylated	19	TP53, ATRX	NA	OAST	186	DECEASED	2	Primary	Female	Matched	Intact
+lgg_ucsf_2014	P11	P11_Rec	30	Glioma	Oligoastrocytoma	II	R132H	Methylated	26	TP53, ATRX	NA	OAST	186	DECEASED	2	Recurrent	Female	Matched	Intact
+lgg_ucsf_2014	P12	P12_Pri	35	Glioma	Astrocytoma	II	R132H	Unknown	16	TP53, ATRX	NA	ASTR	82	LIVING	2	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P12	P12_Rec	35	Glioma	Anaplastic Astrocytoma	III	R132H	Unknown	19	TP53, ATRX	NA	AASTR	82	LIVING	2	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P13	P13_Pri	24	Glioma	Oligoastrocytoma	II	R132G	Unmethylated	26	TP53, ATRX	NA	OAST	106	DECEASED	2	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P13	P13_Rec	24	Glioma	Oligoastrocytoma	II	R132G	Unmethylated	27	TP53, ATRX	NA	OAST	106	DECEASED	2	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P15	P15_Pri	38	Glioma	Oligoastrocytoma	II	R132H	Unknown	20	NA	NA	OAST	143	LIVING	2	Primary	Female	Matched	Co-deletion
+lgg_ucsf_2014	P15	P15_Rec	38	Glioma	Oligoastrocytoma	II	R132H	Unknown	23	CIC	NA	OAST	143	LIVING	2	Recurrent	Female	Matched	Co-deletion
+lgg_ucsf_2014	P16	P16_Pri	35	Glioma	Astrocytoma	II	R132H	Methylated	28	TP53, ATRX	NA	ASTR	38	DECEASED	2	Primary	Female	Matched	Intact
+lgg_ucsf_2014	P16	P16_Rec	35	Glioma	Astrocytoma	II	R132H	Methylated	30	TP53, ATRX	NA	ASTR	38	DECEASED	2	Recurrent	Female	Matched	Intact
+lgg_ucsf_2014	P17	P17_Pri_A	27	Glioma	Oligodendroglioma	II	R132H	Methylated	16	TP53, ATRX	NA	ODG	59	LIVING	7	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P17	P17_Pri_B	27	Glioma	Oligodendroglioma	II	R132H	Methylated	12	TP53, ATRX	NA	ODG	59	LIVING	7	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P17	P17_Pri_C	27	Glioma	Oligodendroglioma	II	R132H	Methylated	12	TP53, ATRX	NA	ODG	59	LIVING	7	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P17	P17_Rec1_A	27	Glioma	Glioblastoma	IV	R132H	Unmethylated	29	TP53, ATRX	NA	GB	59	LIVING	7	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P17	P17_Rec1_B	27	Glioma	Glioblastoma	IV	R132H	Unmethylated	36	TP53, ATRX	NA	GB	59	LIVING	7	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P17	P17_Rec1_C	27	Glioma	Glioblastoma	IV	R132H	Unmethylated	26	TP53, ATRX	NA	GB	59	LIVING	7	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P17	P17_Rec1_D	27	Glioma	Glioblastoma	IV	R132H	Unmethylated	38	TP53, ATRX	NA	GB	59	LIVING	7	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P18	P18_Pri_A	49	Glioma	Oligoastrocytoma	II	R132H	Methylated	50	TP53, ATRX	NA	OAST	106	LIVING	5	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P18	P18_Pri_B	49	Glioma	Oligoastrocytoma	II	R132H	Methylated	45	TP53, ATRX	NA	OAST	106	LIVING	5	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P18	P18_Pri_C	49	Glioma	Oligoastrocytoma	II	R132H	Methylated	56	TP53, ATRX	NA	OAST	106	LIVING	5	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P18	P18_Pri_D	49	Glioma	Oligoastrocytoma	II	R132H	Methylated	49	TP53, ATRX	NA	OAST	106	LIVING	5	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P18	P18_Rec	49	Glioma	Glioblastoma	IV	R132H	Methylated	1708	TP53, ATRX	NA	GB	106	LIVING	5	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P21	P21_Pri	27	Glioma	Oligoastrocytoma	II	R132H	Methylated	23	TP53, ATRX	NA	OAST	35	DECEASED	2	Primary	Male	Matched	19q deletion
+lgg_ucsf_2014	P21	P21_Rec	27	Glioma	Glioblastoma	IV	R132H	Methylated	644	TP53, ATRX	NA	GB	35	DECEASED	2	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P24	P24_Pri	34	Glioma	Astrocytoma	II	R132H	Unmethylated	12	TP53, ATRX	NA	ASTR	109	DECEASED	3	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P24	P24_Rec1	34	Glioma	Astrocytoma	II	R132H	Unmethylated	18	TP53, ATRX	NA	ASTR	109	DECEASED	3	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P24	P24_Rec2	34	Glioma	Glioblastoma	IV	R132H	Methylated	1632	TP53, ATRX	NA	GB	109	DECEASED	3	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P25	P25_Pri	39	Glioma	Astrocytoma	II	R132H	Methylated	36	ATRX	NA	ASTR	42	LIVING	2	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P25	P25_Rec	39	Glioma	Glioblastoma	IV	R132H	Methylated	85	ATRX	NA	GB	42	LIVING	2	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P26	P26_Pri_A	36	Glioma	Astrocytoma	II	R132H	Methylated	20	TP53, ATRX	NA	ASTR	47	LIVING	4	Primary	Female	Matched	Intact
+lgg_ucsf_2014	P26	P26_Pri_B	36	Glioma	Astrocytoma	II	R132H	Methylated	24	TP53, ATRX	NA	ASTR	47	LIVING	4	Primary	Female	Matched	Intact
+lgg_ucsf_2014	P26	P26_Rec1_A	36	Glioma	Anaplastic Astrocytoma	III	R132H	Methylated	30	TP53, ATRX	NA	AASTR	47	LIVING	4	Recurrent	Female	Matched	Intact
+lgg_ucsf_2014	P26	P26_Rec1_B	36	Glioma	Anaplastic Astrocytoma	III	R132H	Methylated	23	TP53, ATRX	NA	AASTR	47	LIVING	4	Recurrent	Female	Matched	Intact
+lgg_ucsf_2014	P27	P27_Pri_A	56	Glioma	Astrocytoma	II	R132H	Methylated	24	TP53, ATRX	NA	ASTR	54	LIVING	4	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P27	P27_Pri_B	56	Glioma	Astrocytoma	II	R132H	Methylated	30	TP53, ATRX	NA	ASTR	54	LIVING	4	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P27	P27_Rec1_A	56	Glioma	Anaplastic Astrocytoma	III	R132H	Methylated	32	TP53, ATRX	NA	AASTR	54	LIVING	4	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P27	P27_Rec1_B	56	Glioma	Anaplastic Astrocytoma	III	R132H	Methylated	29	TP53, ATRX	NA	AASTR	54	LIVING	4	Recurrent	Male	Matched	Intact
+lgg_ucsf_2014	P28	P28_Pri	30	Glioma	Astrocytoma	II	R132H	Methylated	15	TP53, ATRX	NA	ASTR	137	LIVING	2	Primary	Male	Matched	19q deletion
+lgg_ucsf_2014	P28	P28_Rec	30	Glioma	Anaplastic Astrocytoma	III	R132H	Methylated	22	TP53, ATRX	NA	AASTR	137	LIVING	2	Recurrent	Male	Matched	19q deletion
+lgg_ucsf_2014	P29	P29_Pri	52	Glioma	Astrocytoma	II	R132H	Methylated	35	TP53, ATRX	NA	ASTR	109	DECEASED	2	Primary	Male	Matched	Intact
+lgg_ucsf_2014	P29	P29_Rec	52	Glioma	Anaplastic Astrocytoma	III	R132H	Methylated	36	TP53, ATRX	NA	AASTR	109	DECEASED	2	Recurrent	Male	Matched	Intact
