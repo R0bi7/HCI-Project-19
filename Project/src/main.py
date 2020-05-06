@@ -6,10 +6,12 @@ from tensorflow import feature_column
 from tensorflow.keras import layers
 from sklearn.model_selection import train_test_split
 
-categorical_cols = ['Cancer_Type', 'Cancer_Type_Detailed', 'Neoplasm_Histologic_Type_Name', 'ICD-10_Classification',
-                    'Is_FFPE', 'Oncotree_Code', 'Ethnicity_Category', 'Race_Category', 'Sex']
+from src.Classifier import Classifier
+from src.DataManager import DataManager
 
-numerical_cols = ['Fraction_Genome_Altered', 'Karnofsky_Performance_Score', 'Mutation_Count', 'Neoplasm_Histologic_Grade']
+categorical_cols = ['Cancer_Type', 'Cancer_Type_Detailed', 'Oncotree_Code', 'Ethnicity_Category', 'Race_Category', 'Sex']
+
+numerical_cols = ['Fraction_Genome_Altered', 'Mutation_Count', 'Neoplasm_Histologic_Grade']
 
 label_col = 'Diagnosis_Age'
 
@@ -26,15 +28,21 @@ def df_to_dataset(dataframe, shuffle=True, batch_size=32):
 
 def set_age_groups_as_label(dataframe):
     for i, row in dataframe.iterrows():
-        if dataframe.loc[i][label_col] > 50:
-            dataframe.at[i, label_col] = 1
-        else:
+        if dataframe.loc[i][label_col] > 20:
             dataframe.at[i, label_col] = 0
+        elif dataframe.loc[i][label_col] > 40:
+            dataframe.at[i, label_col] = 1
+        elif dataframe.loc[i][label_col] > 60:
+            dataframe.at[i, label_col] = 2
+        elif dataframe.loc[i][label_col] > 80:
+            dataframe.at[i, label_col] = 3
+
+
     return dataframe
 
 
 def load_dataframe():
-    URL = '../data/data.csv'
+    URL = '../data/data2.csv'
     dataframe = pd.read_csv(URL)
     dataframe.head()
     dataframe = dataframe.dropna()
@@ -57,23 +65,23 @@ def predict(train_ds, val_ds, test_ds, feature_layer):
         feature_layer,
         layers.Dense(128, activation='relu'),
         layers.Dense(128, activation='relu'),
-        layers.Dense(1)
+        #layers.Dense(1)
     ])
 
     #Could probably be used for multiclass classification instead of the model.compile below which is only for binary classification
-    #model.compile(
-    #    optimizer='adam',
-    #    loss=['sparse_categorical_crossentropy'],
-    #    metrics=['accuracy']
-    #)
+    model.compile(
+        optimizer='adam',
+        loss=['sparse_categorical_crossentropy'],
+        metrics=['accuracy']
+    )
 
-    model.compile(optimizer='adam',
-                  loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
-                  metrics=['accuracy'])
+    #model.compile(optimizer='adam',
+    #              loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
+    #              metrics=['accuracy'])
 
     model.fit(train_ds,
               validation_data=val_ds,
-              epochs=6)
+              epochs=10)
 
     loss, accuracy = model.evaluate(test_ds)
     print("Accuracy", accuracy, "Loss", loss)
@@ -97,24 +105,28 @@ def create_feature_columns(dataframe):
 
 
 def main():
-    dataframe = load_dataframe()
+    datamanager = DataManager()
+    labels, data = datamanager.get_labels_and_data()
+    classfier = Classifier(labels, data)
+    classfier.predict()
+    #dataframe = load_dataframe()
 
-    train, test, val = create_train_val_test_sets(dataframe)
+    #train, test, val = create_train_val_test_sets(dataframe)
 
-    feature_columns = create_feature_columns(dataframe)
-    feature_layer = tf.keras.layers.DenseFeatures(feature_columns)
+    #feature_columns = create_feature_columns(dataframe)
+    #feature_layer = tf.keras.layers.DenseFeatures(feature_columns)
 
-    batch_size = 32
-    train_ds = df_to_dataset(train, batch_size=batch_size)
-    val_ds = df_to_dataset(val, shuffle=False, batch_size=batch_size)
-    test_ds = df_to_dataset(test, shuffle=False, batch_size=batch_size)
+    #batch_size = 32
+    #train_ds = df_to_dataset(train, batch_size=batch_size)
+    #val_ds = df_to_dataset(val, shuffle=False, batch_size=batch_size)
+    #test_ds = df_to_dataset(test, shuffle=False, batch_size=batch_size)
 
     # for feature_batch, label_batch in train_ds.take(1):
     #    print('Every feature:', list(feature_batch.keys()))
     #    print('A batch of Cancer Types:', feature_batch['Cancer Type'])
     #    print('A batch of targets:', label_batch)
 
-    predict(train_ds, val_ds, test_ds, feature_layer)
+    #predict(train_ds, val_ds, test_ds, feature_layer)
 
 
 if __name__ == "__main__":
