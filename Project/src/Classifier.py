@@ -18,6 +18,11 @@ class Classifier:
     def predict(self):
         X_train, X_test, y_train, y_test = train_test_split(self.data, self.labels, random_state=0)
 
+        # Stack overflow:
+        # TODO You MUST first split into train and test, then replace NA by mean on train and then apply this stateful preprocessing model to test
+
+
+
 
         model = RandomForestClassifier(max_depth=2, random_state=0)
         model.fit(X_train, y_train)

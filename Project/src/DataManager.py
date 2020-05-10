@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
+from Preprocessor import Preprocessor
 
 class DataManager:
     #categorical_cols = ['Cancer_Type', 'Cancer_Type_Detailed', 'Oncotree_Code', 'Ethnicity_Category', 'Race_Category', 'Sex']
@@ -20,8 +21,13 @@ class DataManager:
 
     def __load(self):
         self.data_frame = pd.read_csv(self.__url)
-        self.data_frame = self.data_frame.dropna(axis=0)
-        #print(self.data_frame[self.label_col])
+
+        # remove rows where age == 'nan'
+        self.data_frame = Preprocessor.deleteRowIfColumnIsNan(data_frame=self.data_frame, column_name='Diagnosis_Age')
+        # replace nan values with mean of column
+        self.data_frame = Preprocessor.replaceNanValuesWithMedian(data_frame=self.data_frame)
+
+        # print(self.data_frame[self.label_col])
         #print(self.data_frame["Diagnosis_Age"])
 
     def __set_age_groups_as_label(self):
