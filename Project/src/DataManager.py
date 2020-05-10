@@ -12,15 +12,15 @@ class DataManager:
     data = pd.DataFrame()
     labels = pd.DataFrame()
 
-    def __init__(self):
+    def __init__(self, url):
+        self.__url = url
         self.__load()
         self.__process_data()
         self.__split_labels_from_data()
 
     def __load(self):
-        URL = '../data/data2.csv'
-        self.data_frame = pd.read_csv(URL)
-        self.data_frame = self.data_frame.dropna()
+        self.data_frame = pd.read_csv(self.__url)
+        self.data_frame = self.data_frame.dropna(axis=0)
         #print(self.data_frame[self.label_col])
         #print(self.data_frame["Diagnosis_Age"])
 
