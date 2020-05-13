@@ -23,13 +23,13 @@ class Classifier:
 
 
 
-        model = RandomForestClassifier(max_depth=2, random_state=0)
+        model = RandomForestClassifier(max_depth=7, random_state=4)
         model.fit(X_train, y_train)
 
+        Plotter.plot_feature_importance_for_class(model, X_train)
 
         y_pred = model.predict(X_test)
         Plotter.plot_confusion_matrix(y_test, y_pred)
-        Plotter.plot_feature_importance_for_class(model, X_train)
 
         print(confusion_matrix(y_test, y_pred))
         print(classification_report(y_test, y_pred))
