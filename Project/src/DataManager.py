@@ -1,12 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
-from Preprocessor import Preprocessor
+from src.Preprocessor import Preprocessor
+
 
 class DataManager:
-    #categorical_cols = ['Cancer_Type', 'Cancer_Type_Detailed', 'Oncotree_Code', 'Ethnicity_Category', 'Race_Category', 'Sex']
-    #numerical_cols = ['Fraction_Genome_Altered', 'Mutation_Count', 'Neoplasm_Histologic_Grade']
-
     label_col = 'Diagnosis_Age'
 
     data_frame = pd.DataFrame()
@@ -18,6 +16,7 @@ class DataManager:
         self.__load()
         self.__process_data()
         self.__split_labels_from_data()
+        self.plot_data_balance()
 
     def __load(self):
         self.data_frame = pd.read_csv(self.__url)
@@ -32,13 +31,13 @@ class DataManager:
 
     def __set_age_groups_as_label(self):
         for i, row in self.data_frame.iterrows():
-            if self.data_frame.loc[i][self.label_col] <= 30:
+            if self.data_frame.loc[i][self.label_col] <= 20:
                 self.data_frame.at[i, self.label_col] = 0
             elif self.data_frame.loc[i][self.label_col] <= 40:
                 self.data_frame.at[i, self.label_col] = 1
-            elif self.data_frame.loc[i][self.label_col] <= 55:
+            elif self.data_frame.loc[i][self.label_col] <= 60:
                 self.data_frame.at[i, self.label_col] = 2
-            elif self.data_frame.loc[i][self.label_col] > 55:
+            elif self.data_frame.loc[i][self.label_col] > 60:
                 self.data_frame.at[i, self.label_col] = 3
 
     def plot_data_balance(self):

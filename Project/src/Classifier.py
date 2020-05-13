@@ -1,9 +1,8 @@
 import pandas as pd
-import Plotter as Plotter
+import src.Plotter as Plotter
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from xgboost import XGBClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 
@@ -27,10 +26,10 @@ class Classifier:
         model = RandomForestClassifier(max_depth=2, random_state=0)
         model.fit(X_train, y_train)
 
-        Plotter.plot_feature_importance_for_class(model, X_train)
 
         y_pred = model.predict(X_test)
         Plotter.plot_confusion_matrix(y_test, y_pred)
+        Plotter.plot_feature_importance_for_class(model, X_train)
 
         print(confusion_matrix(y_test, y_pred))
         print(classification_report(y_test, y_pred))
