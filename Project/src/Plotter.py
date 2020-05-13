@@ -16,3 +16,21 @@ def plot_feature_importance_for_class(model, X_train):
     explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(X_train)
     shap.summary_plot(shap_values, X_train, plot_type="bar")
+
+
+def plot_prediction_desicion(model, X_test, pred, row_idx):
+    #The decision plot below shows the model’s multiple outputs for a single observation
+    #the dashed line is the prediction of our classifier
+    explainer = shap.TreeExplainer(model)
+    shap_values = explainer.shap_values(X_test)
+    shap.multioutput_decision_plot([0,1,2,3], shap_values,
+                                   row_index=row_idx,
+                                   feature_names=list(X_test.columns) ,
+                                   highlight=int(pred[row_idx]),
+                                   legend_labels=["0","1","2","3"],
+                                   legend_location='lower right')
+
+
+def plot_data_balance(data_frame, label_col):
+    data_frame.groupby(label_col).Sex.count().plot.bar(ylim=0)
+    plt.show()

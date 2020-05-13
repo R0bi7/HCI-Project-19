@@ -16,7 +16,6 @@ class DataManager:
         self.__load()
         self.__process_data()
         self.__split_labels_from_data()
-        self.plot_data_balance()
 
     def __load(self):
         self.data_frame = pd.read_csv(self.__url)
@@ -39,10 +38,6 @@ class DataManager:
                 self.data_frame.at[i, self.label_col] = 2
             elif self.data_frame.loc[i][self.label_col] > 60:
                 self.data_frame.at[i, self.label_col] = 3
-
-    def plot_data_balance(self):
-        self.data_frame.groupby(self.label_col).Sex.count().plot.bar(ylim=0)
-        plt.show()
 
     def __process_data(self):
         self.__set_age_groups_as_label()

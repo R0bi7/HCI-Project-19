@@ -30,6 +30,7 @@ class Classifier:
 
         y_pred = model.predict(X_test)
         Plotter.plot_confusion_matrix(y_test, y_pred)
+        Plotter.plot_prediction_desicion(model, X_test, y_pred, 0)
 
         print(confusion_matrix(y_test, y_pred))
         print(classification_report(y_test, y_pred))
