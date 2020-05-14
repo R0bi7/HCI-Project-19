@@ -7,8 +7,8 @@ from sklearn.metrics import confusion_matrix
 
 
 def plot_confusion_matrix(y_test, y_pred):
-    cm = pd.DataFrame(confusion_matrix(y_test, y_pred), columns=[0, 1, 2, 3], index=[0, 1, 2, 3])
-    sns.heatmap(cm, annot=True)
+    cm = pd.DataFrame(confusion_matrix(y_test, y_pred), columns=["0-20","20-40","40-60","60+"], index=["0-20","20-40","40-60","60+"])
+    sns.heatmap(cm,annot=True,cmap='Blues', fmt='g')
     plt.show()
 
 
@@ -27,7 +27,7 @@ def plot_prediction_desicion(model, X_test, pred, row_idx):
                                    row_index=row_idx,
                                    feature_names=list(X_test.columns) ,
                                    highlight=int(pred[row_idx]),
-                                   legend_labels=["0","1","2","3"],
+                                   legend_labels=["0-20","20-40","40-60","60+"],
                                    legend_location='lower right')
 
 
