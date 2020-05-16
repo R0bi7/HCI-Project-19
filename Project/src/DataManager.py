@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
-from src.Preprocessor import Preprocessor
+from Preprocessor import Preprocessor
 
 
 class DataManager:
@@ -18,10 +18,20 @@ class DataManager:
         self.__split_labels_from_data()
 
     def __load(self):
-        self.data_frame = pd.read_csv(self.__url)
+        if "csv" in self.__url.lower():
+            self.data_frame = pd.read_csv(self.__url)
+        else:
+            self.data_frame = pd.read_table(self.__url, sep='\t')
 
+        # get column name for age column (can be different such as diagnosis_age, age, Age, ...)
+        age_column_name = Preprocessor.findAgeColumnName(data_frame=self.data_frame)
+        self.label_col = age_column_name
         # remove rows where age == 'nan'
-        self.data_frame = Preprocessor.deleteRowIfColumnIsNan(data_frame=self.data_frame, column_name='Diagnosis_Age')
+        self.data_frame = Preprocessor.deleteRowIfColumnIsNan(data_frame=self.data_frame, column_name=age_column_name)
+
+        # remove columns where majority of values is Nan
+        self.data_frame = Preprocessor.deleteNanColumns(data_frame=self.data_frame, threshold=30)
+
         # replace nan values with mean of column
         self.data_frame = Preprocessor.replaceNanValuesWithMedian(data_frame=self.data_frame)
 

@@ -1,5 +1,5 @@
 import pandas as pd
-import src.Plotter as Plotter
+import Plotter as Plotter
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -26,14 +26,14 @@ class Classifier:
         model = RandomForestClassifier(max_depth=7, random_state=4)
         model.fit(X_train, y_train)
 
-        Plotter.plot_feature_importance_for_class(model, X_train)
+        # Plotter.plot_feature_importance_for_class(model, X_train)
 
         y_pred = model.predict(X_test)
-        Plotter.plot_confusion_matrix(y_test, y_pred)
-        Plotter.plot_prediction_desicion(model, X_test, y_pred, 0)
+        # Plotter.plot_confusion_matrix(y_test, y_pred)
+        # Plotter.plot_prediction_desicion(model, X_test, y_pred, 0)
 
-        print(confusion_matrix(y_test, y_pred))
-        print(classification_report(y_test, y_pred))
+        # print(confusion_matrix(y_test, y_pred))
+        # print(classification_report(y_test, y_pred))
         print("Accuracy = " + str(round(accuracy_score(y_test, y_pred) * 100, 2)) + " %")
 
 
