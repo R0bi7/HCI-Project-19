@@ -1,0 +1,16 @@
+We used glioma specific data from 18 different projects via 
+https://pedcbioportal.kidsfirstdrc.org/study/summary?id=genie_chop%2Cpbta_all%2Ccptac_cbttc%2Clgg_tcga%2Cglioma_msk_2018%2Clgg_ucsf_2014%2Clgggbm_tcga_pub%2Csega_cbttc%2Cdipg_cbttc%2Cpbta_pnoc003%2Cglioma_baker_gse19578%2Cglioma_baker_gse26576%2Cgbm_tcga%2Cgnos_cbttc%2Cphgg_herby%2Cphgg_jones_meta_2017%2Cphgg_cbttc%2Cplgg_cbttc 
+
+-> the download button at the right top only includes the clinical data such as age, but not the specific genomic data details.
+
+
+Therefore, the following steps describe, how you get these "additional information": 
+
+->You have to export the column "mutated genes" 
+-> open the export and just take the column genes -> sort by mutation count 
+-> take only those that have >= 2 mutations and then copy all the gene names and go back to the pedcbioportal link and make a query at the right top input with those gene names....
+-> download mutation table at the download tab right
+-> the table provides genes and their mutations also in percentage.
+
+-> Since pedcbioportal allows to query for max 167 different gene IDs, we chose the 140 top mutated genes out of the summary of all 18 projects.
+ These include mutation frequencies down to 2%.
