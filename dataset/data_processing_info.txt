@@ -6,11 +6,21 @@ https://pedcbioportal.kidsfirstdrc.org/study/summary?id=genie_chop%2Cpbta_all%2C
 
 Therefore, the following steps describe, how you get these "additional information": 
 
-->You have to export the column "mutated genes" 
--> open the export and just take the column genes -> sort by mutation count 
--> take only those that have >= 2 mutations and then copy all the gene names and go back to the pedcbioportal link and make a query at the right top input with those gene names....
--> download mutation table at the download tab right
--> the table provides genes and their mutations also in percentage.
-
+-> You have to export the column "mutated genes" within the overview of pedcbioportal web ui
+-> open the exported file and just take the column genes -> sort by mutation count 
+-> take only those that have >= 2% mutations and then copy all the gene names and go back to the pedcbioportal link and make a query at the right top input field with those gene names...
 -> Since pedcbioportal allows to query for max 167 different gene IDs, we chose the 140 top mutated genes out of the summary of all 18 projects.
  These include mutation frequencies down to 2%.
+
+-> querying in the web ui needs some time then until results are loaded
+-> when results are ready, go to the download tab (right) and download mutation table
+-> the table provides genes and their mutations with a listing of mutation labels or respectively strings.
+-> We take "na" as 0 mutation, 
+and if there is some other string, it is a mutation, 
+and if there is a blank " " it means, there are multiple mutations
+-> By using these "mutation strings" per gene within the provided mutations.txt file. These "mutation strings" detail the type of mutation which occured for the specific gene (the gene encodes for several amino-acids which could be changed by mutation) e.g. "C238F" signifies that at position 238 aminoacid C was changed to aminoacid F...
+
+-> SO, we think the ML model should 
+1.) at least include mutation yes or no per gene. 
+2.) more interesting results will occur with mutation count per gerne. 
+3.) most interesting but also most complex results will be gained by differentiating the mutation type per gene too as feature.
