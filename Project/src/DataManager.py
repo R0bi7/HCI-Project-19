@@ -1,32 +1,26 @@
 import pandas as pd
-import matplotlib.pyplot as plt
+import numpy as np
 from sklearn import preprocessing
-from src.Preprocessor import Preprocessor
 
 
 class DataManager:
     label_col = 'Diagnosis_Age'
 
+    __mutations = pd.DataFrame()
+    __ageInfo = pd.DataFrame()
+
     data_frame = pd.DataFrame()
     data = pd.DataFrame()
     labels = pd.DataFrame()
 
-    def __init__(self, url):
-        self.__url = url
+    def __init__(self):
         self.__load()
         self.__process_data()
         self.__split_labels_from_data()
 
     def __load(self):
-        self.data_frame = pd.read_csv(self.__url)
-
-        # remove rows where age == 'nan'
-        self.data_frame = Preprocessor.deleteRowIfColumnIsNan(data_frame=self.data_frame, column_name='Diagnosis_Age')
-        # replace nan values with mean of column
-        self.data_frame = Preprocessor.replaceNanValuesWithMedian(data_frame=self.data_frame)
-
-        # print(self.data_frame[self.label_col])
-        #print(self.data_frame["Diagnosis_Age"])
+        self.__ageInfo = pd.read_csv("../data/mutation_age_info.csv")
+        self.__mutations = pd.read_csv("../data/mutations.txt", sep='\t')
 
     def __set_age_groups_as_label(self):
         for i, row in self.data_frame.iterrows():
@@ -38,8 +32,11 @@ class DataManager:
                 self.data_frame.at[i, self.label_col] = 2
 
     def __process_data(self):
+        self.__set_text_as_true_and_nan_as_false()
+        self.__merge_frames()
         self.__set_age_groups_as_label()
-        self.__categorical_data_to_numerical()
+        print(self.data_frame)
+        #self.__categorical_data_to_numerical()
 
     def __categorical_data_to_numerical(self):
         dataframe_copy = self.data_frame.select_dtypes(include=['object']).copy()
@@ -65,3 +62,15 @@ class DataManager:
     def get_labels_and_data(self):
         return self.labels, self.data
 
+    def __merge_frames(self):
+        self.__ageInfo = self.__ageInfo.drop_duplicates(subset=['Sample_ID'], keep='first')
+        self.data_frame = pd.merge(self.__mutations, self.__ageInfo[["Diagnosis_Age", "Sample_ID", "Mutation_Count"]], on="Sample_ID")
+        self.data_frame = self.data_frame.drop(columns=['Sample_ID', 'STUDY_ID'])
+        self.data_frame = self.data_frame.dropna()
+
+    def __set_text_as_true_and_nan_as_false(self):
+        sampleid = self.__mutations[['Sample_ID', "STUDY_ID"]].copy()
+        self.__mutations = self.__mutations.drop(columns=['Sample_ID', 'STUDY_ID'])
+        self.__mutations = pd.DataFrame(np.where(self.__mutations.isna(), self.__mutations, 1), columns=self.__mutations.columns)
+        self.__mutations = self.__mutations.fillna(0)
+        self.__mutations = self.__mutations.join(sampleid)

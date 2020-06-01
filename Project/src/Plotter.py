@@ -7,7 +7,7 @@ from sklearn.metrics import confusion_matrix
 
 
 def plot_confusion_matrix(y_test, y_pred):
-    cm = pd.DataFrame(confusion_matrix(y_test, y_pred), columns=["0-20","20-40","40-60","60+"], index=["0-20","20-40","40-60","60+"])
+    cm = pd.DataFrame(confusion_matrix(y_test, y_pred), columns=["0-18", "19-50", "50+"], index=["0-18", "19-50", "50+"])
     sns.heatmap(cm,annot=True,cmap='Blues', fmt='g')
     plt.show()
 
@@ -23,11 +23,11 @@ def plot_prediction_desicion(model, X_test, pred, row_idx):
     #the dashed line is the prediction of our classifier
     explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(X_test)
-    shap.multioutput_decision_plot([0,1,2,3], shap_values,
+    shap.multioutput_decision_plot([0, 1, 2], shap_values,
                                    row_index=row_idx,
                                    feature_names=list(X_test.columns) ,
                                    highlight=int(pred[row_idx]),
-                                   legend_labels=["0-20","20-40","40-60","60+"],
+                                   legend_labels=["0-18", "19-50", "50+"],
                                    legend_location='lower right')
 
 
