@@ -30,14 +30,12 @@ class DataManager:
 
     def __set_age_groups_as_label(self):
         for i, row in self.data_frame.iterrows():
-            if self.data_frame.loc[i][self.label_col] <= 20:
+            if self.data_frame.loc[i][self.label_col] <= 18:
                 self.data_frame.at[i, self.label_col] = 0
-            elif self.data_frame.loc[i][self.label_col] <= 40:
+            elif self.data_frame.loc[i][self.label_col] <= 50:
                 self.data_frame.at[i, self.label_col] = 1
-            elif self.data_frame.loc[i][self.label_col] <= 60:
+            elif self.data_frame.loc[i][self.label_col] > 50:
                 self.data_frame.at[i, self.label_col] = 2
-            elif self.data_frame.loc[i][self.label_col] > 60:
-                self.data_frame.at[i, self.label_col] = 3
 
     def __process_data(self):
         self.__set_age_groups_as_label()
