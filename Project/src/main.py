@@ -1,5 +1,5 @@
-from src.Classifier import Classifier
-from src.DataManager import DataManager
+from Classifier import Classifier
+from DataManager import DataManager
 import glob
 
 

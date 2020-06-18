@@ -2,6 +2,7 @@ import shap
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
+import random
 
 from sklearn.metrics import confusion_matrix
 
@@ -13,7 +14,7 @@ def plot_confusion_matrix(y_test, y_pred):
 
 
 def plot_feature_importance_for_class(model, X_train):
-    explainer = shap.TreeExplainer(model)
+    explainer = shap.TreeExplainer(model, data=shap.sample(X_train, 100), feature_dependence="interventional")
     shap_values = explainer.shap_values(X_train)
     shap.summary_plot(shap_values, X_train, plot_type="bar")
 
@@ -21,7 +22,7 @@ def plot_feature_importance_for_class(model, X_train):
 def plot_prediction_desicion(model, X_test, pred, row_idx):
     #The decision plot below shows the model’s multiple outputs for a single observation
     #the dashed line is the prediction of our classifier
-    explainer = shap.TreeExplainer(model)
+    explainer = shap.TreeExplainer(model, data=shap.sample(X_test, 100), feature_dependence="interventional")
     shap_values = explainer.shap_values(X_test)
     shap.multioutput_decision_plot([0, 1, 2], shap_values,
                                    row_index=row_idx,
