@@ -2,25 +2,20 @@ import pandas as pd
 import numpy as np
 from sklearn import preprocessing
 
-
 class DataManager:
-    label_col = 'Diagnosis_Age'
-
-    __mutations = pd.DataFrame()
-    __ageInfo = pd.DataFrame()
+    label_col = 'Age'
 
     data_frame = pd.DataFrame()
     data = pd.DataFrame()
     labels = pd.DataFrame()
 
     def __init__(self):
-        self.__load()
+        self.__load_file()
         self.__process_data()
         self.__split_labels_from_data()
 
-    def __load(self):
-        self.__ageInfo = pd.read_csv("../data/mutation_age_info.csv")
-        self.__mutations = pd.read_csv("../data/mutations.txt", sep='\t')
+    def __load_file(self):
+        self.data_frame = pd.read_csv("../data/mutations.csv", sep=',')
 
     def __set_age_groups_as_label(self):
         for i, row in self.data_frame.iterrows():
@@ -33,10 +28,8 @@ class DataManager:
 
     def __process_data(self):
         self.__set_text_as_true_and_nan_as_false()
-        self.__merge_frames()
         self.__set_age_groups_as_label()
-        print(self.data_frame)
-        #self.__categorical_data_to_numerical()
+        self.__categorical_data_to_numerical()
 
     def __categorical_data_to_numerical(self):
         dataframe_copy = self.data_frame.select_dtypes(include=['object']).copy()
@@ -62,15 +55,13 @@ class DataManager:
     def get_labels_and_data(self):
         return self.labels, self.data
 
-    def __merge_frames(self):
-        self.__ageInfo = self.__ageInfo.drop_duplicates(subset=['Sample_ID'], keep='first')
-        self.data_frame = pd.merge(self.__mutations, self.__ageInfo[["Diagnosis_Age", "Sample_ID", "Mutation_Count"]], on="Sample_ID")
-        self.data_frame = self.data_frame.drop(columns=['Sample_ID', 'STUDY_ID'])
-        self.data_frame = self.data_frame.dropna()
-
     def __set_text_as_true_and_nan_as_false(self):
-        sampleid = self.__mutations[['Sample_ID', "STUDY_ID"]].copy()
-        self.__mutations = self.__mutations.drop(columns=['Sample_ID', 'STUDY_ID'])
-        self.__mutations = pd.DataFrame(np.where(self.__mutations.isna(), self.__mutations, 1), columns=self.__mutations.columns)
-        self.__mutations = self.__mutations.fillna(0)
-        self.__mutations = self.__mutations.join(sampleid)
+        #not sure if we should take DifferentMutatedGenesCount - think it is not necessary
+        #additionalData = self.data_frame[['Gender', "Age", 'Mutation_Count', 'DifferentMutatedGenesCount']].copy()
+        additionalData = self.data_frame[['Gender', "Age", 'Mutation_Count']].copy()
+        self.data_frame = self.data_frame.drop(columns=['Gender', "Age", 'Mutation_Count', 'DifferentMutatedGenesCount'])
+        self.data_frame.replace('0', np.nan, inplace=True)
+        self.data_frame = pd.DataFrame(np.where(self.data_frame.isna(), self.data_frame, 1), columns=self.data_frame.columns)
+        self.data_frame = self.data_frame.fillna(0)
+        self.data_frame = self.data_frame.join(additionalData)
+        self.data_frame.replace(np.nan, 0, inplace=True)

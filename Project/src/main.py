@@ -1,6 +1,5 @@
 from src.Classifier import Classifier
 from src.DataManager import DataManager
-import glob
 
 
 def main():

@@ -32,5 +32,5 @@ def plot_prediction_desicion(model, X_test, pred, row_idx):
 
 
 def plot_data_balance(data_frame, label_col):
-    data_frame.groupby(label_col).Sex.count().plot.bar(ylim=0)
+    data_frame.groupby(label_col).Gender.count().plot.bar(ylim=0)
     plt.show()
