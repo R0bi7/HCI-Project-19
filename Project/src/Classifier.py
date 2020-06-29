@@ -32,8 +32,8 @@ class Classifier:
         models.append(('LDA', LinearDiscriminantAnalysis()))
         models.append(('KNN', KNeighborsClassifier()))
         models.append(('CART', DecisionTreeClassifier(random_state=2)))  # secondBest
-        # models.append(('NB', GaussianNB()))              #slow and bad
-        # models.append(('SVM', SVC(gamma='auto'))) #commented out bc slow
+        models.append(('NB', GaussianNB()))              #slow and bad
+        models.append(('SVM', SVC(gamma='auto'))) #slow
         models.append(('RFC', RandomForestClassifier(random_state=2)))  # best
 
         results = []
