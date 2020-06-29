@@ -16,6 +16,9 @@ def plot_feature_importance_for_class(model, X_train):
     explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(X_train)
     shap.summary_plot(shap_values, X_train, plot_type="bar")
+    shap.summary_plot(shap_values[0], X_train)
+    shap.summary_plot(shap_values[1], X_train)
+    shap.summary_plot(shap_values[2], X_train)
 
 
 def plot_prediction_desicion(model, X_test, pred, row_idx):

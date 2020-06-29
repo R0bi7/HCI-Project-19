@@ -34,6 +34,13 @@ class Preprocessor:
             if "age" in column_name.lower():
                 return column_name
 
+    @staticmethod
+    def countMutations(data_frame: pd.DataFrame):
+        for column_name in data_frame:
+            if column_name not in ['Gender', "Age", 'Mutation_Count']:
+                data_frame[column_name] = data_frame[column_name].astype(str).str.split(' ').str.len()
+        return data_frame
+
     # delete nan columns depending on the threshold how many (in percentage) of the values can be missing in column
     @staticmethod
     def deleteNanColumns(data_frame: pd.DataFrame, threshold: float = 0.0):

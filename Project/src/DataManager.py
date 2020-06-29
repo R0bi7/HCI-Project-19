@@ -30,6 +30,7 @@ class DataManager:
     def __process_data(self):
         # # replace nan values with mean of column
         self.data_frame = Preprocessor.replaceNanValuesWithMedian(data_frame=self.data_frame)
+        #self.data_frame = Preprocessor.countMutations(data_frame= self.data_frame)
         # # remove columns where majority of values is Nan or Zero
         # self.data_frame = Preprocessor.deleteNanColumns(data_frame=self.data_frame, threshold=99)
 
