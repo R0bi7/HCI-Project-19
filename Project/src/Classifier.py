@@ -24,7 +24,7 @@ class Classifier:
         self.labels = labels
 
     def predict(self):
-        X_train, X_test, y_train, y_test = train_test_split(self.data, self.labels, test_size=0.20, random_state=2)
+        X_train, X_test, y_train, y_test = train_test_split(self.data, self.labels, test_size=0.20, random_state=1)
 
         print('testing different models:')
         models = []
@@ -50,7 +50,7 @@ class Classifier:
         #   model.fit(X_train, y_train)
         #   predictions = model.predict(X_test)
 
-        model = RandomForestClassifier(random_state=2)
+        model = RandomForestClassifier(random_state=1)
         model.fit(X_train, y_train)
         predictions = model.predict(X_test)
 
