@@ -17,6 +17,7 @@ def plot_feature_importance_for_class(model, X_train):
     explainer = shap.TreeExplainer(model, data=shap.sample(X_train, 100), feature_dependence="interventional")
     shap_values = explainer.shap_values(X_train)
     shap.summary_plot(shap_values, X_train, plot_type="bar")
+     # IMPORTANT for some reason the three lines below might break if the line above this isn't commmented out
     shap.summary_plot(shap_values[0], X_train)
     shap.summary_plot(shap_values[1], X_train)
     shap.summary_plot(shap_values[2], X_train)

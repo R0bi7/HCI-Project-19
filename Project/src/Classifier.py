@@ -34,7 +34,7 @@ class Classifier:
         models.append(('CART', DecisionTreeClassifier(random_state=2)))  # secondBest
         models.append(('NB', GaussianNB()))              #slow and bad
         models.append(('SVM', SVC(gamma='auto'))) #slow
-        models.append(('RFC', RandomForestClassifier(random_state=2)))  # best
+        models.append(('RFC', RandomForestClassifier(random_state=1)))  # best
 
         results = []
         names = []
