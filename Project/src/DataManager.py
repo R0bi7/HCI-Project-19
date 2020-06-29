@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn import preprocessing
+from Preprocessor import Preprocessor
 
 class DataManager:
     label_col = 'Age'
@@ -27,7 +28,13 @@ class DataManager:
                 self.data_frame.at[i, self.label_col] = 2
 
     def __process_data(self):
+        # # replace nan values with mean of column
+        self.data_frame = Preprocessor.replaceNanValuesWithMedian(data_frame=self.data_frame)
+        # # remove columns where majority of values is Nan or Zero
+        # self.data_frame = Preprocessor.deleteNanColumns(data_frame=self.data_frame, threshold=99)
+
         self.__set_text_as_true_and_nan_as_false()
+
         self.__set_age_groups_as_label()
         self.__categorical_data_to_numerical()
 

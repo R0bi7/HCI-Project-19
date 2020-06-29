@@ -1,5 +1,5 @@
 import pandas as pd
-import src.Plotter as Plotter
+import Plotter as Plotter
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
