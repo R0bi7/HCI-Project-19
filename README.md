@@ -2,7 +2,13 @@
 Team Members:
 Tobias Stangl - 01530138
 Robi Markač - 119337706
-Mauro Jurada - 11739653
+Mauro Jurada - 11739653\
+
+## Instructions to run
+To run this program for age classification base on cancer features simply clone/download this reporsitory. 
+It is required to have **python3** installed to run this application. You probably will have to download some **libraries** to run.
+To execute, open command line and navigate to the folder where **main.py** is located. Run main.py using `python3 main.py`.
+The program will run, classify the data and plot all plots implemented to explain the Classifier and visualize the results.
 
 ## Description   
 In our project we will make use of a classification algorithm, extract features, identify feature 
